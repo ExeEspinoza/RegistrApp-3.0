@@ -1,0 +1,17 @@
+<ion-content ion-padding>
+
+    <!--Escanear-->
+    <ion-button expand="block" color="success" (click)="LeerCode()"> Escanear Código</ion-button>
+
+    <div *ngIf="datosescaneados">
+        <p>
+<ion-card-content>
+            contenido obtenido: <b>{{ datosescaneados }}</b>
+</ion-card-content>
+        </p>
+
+    </div>
+    
+</ion-content>
+
+

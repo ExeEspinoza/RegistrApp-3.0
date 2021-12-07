@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">/</ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-padding-top ion-text-center">
+      RegistrAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding-vertical">
+    <ion-card color="mycolor" class="ion-text-center">
+    <ion-card-content>
+      <ion-card-title>
+        <h1>
+          Bienvenido
+        </h1>
+        <h2>
+          {{dato.usuario}}
+        </h2>
+      </ion-card-title>
+      <ion-icon name="person"></ion-icon>
+      <ion-item lines="none">
+        <ion-label color="mycolor">
+          Bienvenido: {{dato.usuario}}
+        </ion-label>
+      </ion-item>
+      <ion-datetime 
+          value="{{fechaNaci | date: 'yyyy-MM-dd' }}" display-timezone="utc">
+      </ion-datetime>
+    </ion-card-content>
+  </ion-card>
+  </div>
+
+  
+<br>
+<br>
+    <ion-toolbar>
+      <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="uno">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="dos">
+          <ion-icon name="qr-code-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="tres">
+          <ion-icon name="school-outline"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      </ion-toolbar>
+
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
